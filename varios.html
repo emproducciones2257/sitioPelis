@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+          Mueva el mouse sobre mí durante unos segundos
+          para ver mi título enlazado dinámicamente.
+        </span>
+      </div>
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+      var app2 = new Vue({
+        el: '#app-2',
+        data: {
+          message: 'Usted cargó esta página el ' + new Date().toLocaleString()
+        }
+      })
+    </script>
+    
+</body>
+</html>

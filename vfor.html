@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <div id="listado">
+
+       <h3>{{titulo}}</h3>
+        <ul>
+            <li v-for="ele of listados"> {{ele}}</li>
+        </ul>
+
+        <h3>{{titulo2}}</h3>
+        <ul>
+            <li v-for="elem of objetitos">{{elem.nombre}} , {{elem.digito}}</li>
+        </ul>
+   </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var obj = new Vue({
+
+            el:'#listado',
+            data:{
+                titulo:"lista simple",
+                listados: ["uno","dos","tres","cuatro"],
+
+                titulo2:"lista con objetos",
+
+                objetitos:[
+                    {nombre:"uno",digito:1},
+                    {nombre:"dos",digito:2},
+                    {nombre:"tres",digito:3},
+                    {nombre:"cuatro",digito:4}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

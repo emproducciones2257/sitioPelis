@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="idTexto">
+        <h1>Texto en HTML</h1>
+        <br>
+        <h2>{{texto}}</h2>
+        <br>
+        <h3>{{texto2}}</h3>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <script>
+
+            var obj = new Vue({
+
+                el: '#idTexto',
+
+                data:{
+                  texto:"Ejemplo de v-text",
+                  texto2: "Otro texto ejemplo"
+                }
+            })
+        </script>
+
+</body>
+</html>
